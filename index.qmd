@@ -1,11 +1,21 @@
 ---
-title: "KP_SMPA3230_Website"
+title: "Kelli Pang"
+about:
+  template: jolla
+  image: kp_head.jpg
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/kellipang
+
 ---
 
-This is a Quarto website.
+Hello, I'm Kelli! Welcome to my portfolio website, a project for SMPA 3230. 
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+### Education 
 
-```{r}
-1 + 1
-```
+I am a fourth-year student at the George Washington University, studying business with concentrations in business analytics and marketing, and a minor in journalism and mass communications.  
+
+### Professional Experience
+
+I have been an ad operations intern at Industry Dive since June 2022. Previously, I was a marketing and communications intern at the Sports and Fitness Industry Association. 
