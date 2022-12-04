@@ -10,7 +10,7 @@ about:
 
 ---
 
-Hello, I'm Kelli! Welcome to my portfolio website, a project for SMPA 3230. 
+Hello, I'm Kelli!
 
 ### Education 
 
@@ -18,4 +18,5 @@ I am a fourth-year student at the George Washington University, studying busines
 
 ### Professional Experience
 
-I have been an ad operations intern at Industry Dive since June 2022. Previously, I was a marketing and communications intern at the Sports and Fitness Industry Association. 
+I have been an ad operations intern at Industry Dive since June 2022. Previously, I was a marketing and communications intern at the Sports and Fitness Industry Association.
+
