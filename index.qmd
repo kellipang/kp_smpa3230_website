@@ -2,7 +2,7 @@
 title: "Kelli Pang"
 about:
   template: jolla
-  image: kp_head.jpg
+  image: kp_cropped.jpeg
   links:
     - icon: github
       text: Github
@@ -18,5 +18,4 @@ I am a fourth-year student at the George Washington University, studying busines
 
 ### Professional Experience
 
-I have been an ad operations intern at Industry Dive since June 2022. Previously, I was a marketing and communications intern at the Sports and Fitness Industry Association.
-
+I have been an ad operations intern at Industry Dive since June 2022. Previously, I worked at the Sports and Fitness Industry Association as a marketing and communications intern. 
