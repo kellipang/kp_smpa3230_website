@@ -4,4 +4,9 @@ title: "Portfolio"
 Here are some stories I have written throughout college. 
 
 * [Who let the dogs out?](https://docs.google.com/document/d/1FgQSgZI90MdiWdq5rpBq3Uao-W0FCcZkffr63zhWWvs/edit?usp=sharing)
-+ A look at how daily dog park outings created a friend group during the COVID-19 pandemic lockdown. 
+  + A look at how daily dog park outings created a friend group during the COVID-19 pandemic lockdown. 
+
+* [5 things you should know about monkeypox](https://docs.google.com/document/d/1KPIYQAhuncH0JisMTBsgZ8v-_dl1D1NE3nwNEPa6Ad8/edit?usp=sharing)
+  + A listicle sharing different facts and statistics about the 2022 monkeypox outbreak. 
+
+
