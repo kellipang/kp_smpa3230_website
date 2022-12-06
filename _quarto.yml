@@ -10,6 +10,13 @@ website:
         text: Home
       - about.qmd
       - portfolio.qmd
+  page-footer: 
+    left: "Copyright 2022, Kelli Pang" 
+    right: 
+      - icon: github
+        href: https://github.com/kellipang
+      
+
 
 format:
   html:
