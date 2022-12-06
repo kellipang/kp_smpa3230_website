@@ -1,5 +1,11 @@
 ---
 title: "Analysis Walkthrough"
+format:
+  html:
+    self-contained: true
+    code-fold: true
+    code-tools: true
+
 ---
 The following is an analysis I completed for DNSC4233, Social Network Analytics. 
 
@@ -337,3 +343,90 @@ Here are some of the key takeaways from this analysis and comparison of the dolp
     -   All of the differences make sense because the dolphin network data comes from observations in the natural environment. Meanwhile, the karate network data was designed to highlight friction in an organization that eventually split into two groups.
 
 It would be interesting to take a closer look at the networks individually through metrics like, cluster coefficient and density.
+
+### Analysis Code
+Here is the code used to create this analysis. For viewing ease, lines of code that plot graphs have been included as comments (i.e. #plot(dolphin_network, main="Dolphin Network")). To reciprocate analysis, remove the #s and run the code. 
+```{r results=FALSE, warning=FALSE, message=FALSE}
+library(igraph)
+library(igraphdata)
+library(ggplot2)
+dolphin_df <- "https://raw.githubusercontent.com/graphstream/gs-gephi/master/data/dolphins.gml"
+karate_df <- data("karate")
+dolphin_network <- read_graph(dolphin_df, format="gml")
+get.vertex.attribute(dolphin_network)
+E(dolphin_network)
+karate_network <- karate
+get.vertex.attribute(karate_network)
+E(karate_network)
+#par(mfrow=c(1,2))
+#plot(dolphin_network, main="Dolphin Network")
+#plot(karate_network, main="Karate Network")
+#par(mfrow=c(1,2))
+#hist(degree(dolphin_network), main="Dolphin Network \nDegree Distribution")
+#hist(degree(karate_network), main="Karate Network \nDegree Distribution")
+dolphin_triad <- as.data.frame(triad.census(dolphin_network))
+dolphin_triad$code <- c("003", "012", "102", "021D", "021U", "021C", "111D", "111U",
+             "030T", "030C", "201", "120D", "120U", "120C", "210", "300")
+colnames(dolphin_triad) <- c("freq", "code")
+
+karate_triad <- as.data.frame(triad.census(karate_network))
+karate_triad$code <- c("003", "012", "102", "021D", "021U", "021C", "111D", "111U",
+             "030T", "030C", "201", "120D", "120U", "120C", "210", "300")
+colnames(karate_triad) <- c("freq", "code")
+#ggplot(dolphin_triad, aes(x = code, y = freq)) +
+  #geom_bar(fill = "#0073C2FF", stat = "identity") +
+  #geom_text(aes(label = freq), vjust = -0.3) +
+  #theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  #xlab("Triad type based on MAN notation") +
+  #ylab("Count") +
+  #ggtitle("Dolphin Network Triad Census")
+#ggplot(karate_triad, aes(x = code, y = freq)) +
+  #geom_bar(fill = "#0073C2FF", stat = "identity") +
+  #geom_text(aes(label = freq), vjust = -0.3) +
+  #theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  #xlab("Triad type based on MAN notation") +
+  #ylab("Count") +
+  #ggtitle("Karate Network Triad Census")
+mean(degree(dolphin_network))
+sort(setNames( degree(dolphin_network),V(dolphin_network)$label))
+sort(setNames( degree(dolphin_network, normalized = TRUE),V(dolphin_network)$label))
+mean(degree(dolphin_network, normalized=TRUE))
+mean(degree(karate_network))
+sort(degree(karate_network))
+sort(degree(karate_network, normalized = TRUE))
+mean(degree(karate_network, normalized=TRUE))
+mean(betweenness(dolphin_network))
+sort(setNames( betweenness(dolphin_network),V(dolphin_network)$label))
+sort(setNames( betweenness(dolphin_network, normalized=TRUE),V(dolphin_network)$label))
+mean(betweenness(dolphin_network, normalized = TRUE))
+mean(betweenness(karate_network))
+sort(betweenness(karate_network))
+sort(betweenness(karate_network, normalized=TRUE))
+mean(betweenness(karate_network, normalized = TRUE))
+mean(closeness(dolphin_network))
+dolphinclose <-  sort(setNames( closeness(dolphin_network),V(dolphin_network)$label))
+sort(setNames( closeness(dolphin_network, normalized=TRUE),V(dolphin_network)$label))
+mean(closeness(dolphin_network, normalized = TRUE))
+mean(closeness(karate_network))
+sort(closeness(karate_network))
+sort(closeness(karate_network, normalized=TRUE))
+mean(closeness(karate_network, normalized = TRUE))
+dolphin_eigen <- eigen_centrality(dolphin_network)$vector
+sort(setNames(dolphin_eigen, V(dolphin_network)$label))
+mean(eigen_centrality(dolphin_network)$vector)
+sort(eigen_centrality(karate_network)$vector)
+mean(eigen_centrality(karate_network)$vector)
+d_degree <-  degree(dolphin_network)
+d_between <- betweenness(dolphin_network)
+d_close <- closeness(dolphin_network)
+d_eigen <- eigen_centrality(dolphin_network)
+d_df <- data.frame(d_degree, d_between, d_close)
+cor(d_df)
+k_degree <-  degree(karate_network)
+k_between <- betweenness(karate_network)
+k_close <- closeness(karate_network)
+k_eigen <- eigen_centrality(karate_network)
+k_df <- data.frame(k_degree, k_between, k_close)
+cor(k_df)
+```
+
