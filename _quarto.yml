@@ -3,7 +3,7 @@ project:
   output-dir: docs
   
 website:
-  title: "KP_SMPA3230_Website"
+  title: "Kelli's Data Journalism Website"
   navbar:
     left:
       - href: index.qmd
@@ -11,6 +11,8 @@ website:
       - about.qmd
       - portfolio.qmd
       - walkthrough.qmd
+      - paper.qmd
+      - academicpaper.qmd
   page-footer: 
     left: "Copyright 2022, Kelli Pang" 
     right: 

@@ -1,0 +1,45 @@
+---
+title: "Policy Brief"
+---
+
+The following text is a draft of a policy brief I wrote for my science communications class. The piece outlines the effects Bisphenol A (BPA) has on human health and new research from the European Food Safety Authority. The United States' Food and Drug Administration should consider the EFSA's recent report to review current safe ingestion levels of BPA. As they stand, the FDA's guidelines are 1.25 million times higher than the EFSA's new proposed maximum intake level. In addition to reviewing the safety of BPA, the FDA should implement a process to periodically review decsiions about chemical exposures and food safety. 
+
+### **The Effects of Bisphenol A on Human Health**
+
+##### **Executive Summary** 
+
+Bisphenol A, BPA, is a chemical compound used to create polycarbonate plastics and epoxy resin. People are exposed to BPA when they eat and drink from containers made/lined with BPA plastics or resins. Researchers have found that BPA has harmful effects on human development and fertility, and may cause obesity, type II diabetes, high blood pressure, and autoimmune disorders. Recent chemical assessments by the European Food Safety Authority indicate that even low exposure to BPA can result in long-term health issues. 
+In accordance with the EFSA’s findings, the U.S. Food and Drug Administration should review current safety standards surrounding BPA exposure. Further, the FDA should consider implementing a program to periodically review the safety of chemical compounds.  
+
+##### **Introduction** 
+
+In 1891, Russian chemist Aleksandr P. Dianin created bisphenol A for the first time. One hundred thirty-one years later, the chemical compound can be found in can linings, water bottles, and the bloodstreams of 93% of Americans over the age of six. How are so many people exposed to BPA? And perhaps more importantly, what does BPA exposure mean for people’s health? 
+
+Bisphenol A, typically referred to as BPA, has been a key component in epoxy resin and polycarbonate plastic production since the 1950s. Known for their resilience and strength, epoxy resin and polycarbonate plastics are used in everything from aircraft manufacturing to thermal paper receipts and dental sealants to food and beverage packaging. People are most commonly exposed to BPA when the chemical leaches from packaging liners to their foods and drinks. While humans generally process small amounts of BPA quickly, scientists have found that overexposure- also stemming from nonfood sources and the accumulation of BPA in body fat- can lead to a myriad of health problems. 
+
+Because it has a similar chemical structure to estrogen, BPA is known as an endocrine-disrupting compound. Human endocrine systems are in charge of regulating the hormones that control the body’s growth, development, metabolism, and reproduction. BPA interferes with people’s endocrine systems by intercepting interactions between the body’s hormones and hormone receptors, exaggerating the effects of natural hormones. Therefore, BPA has been linked to problems like infertility and early puberty, as well as cases of breast and prostate cancer, and polycystic ovary syndrome. Research has also found that prenatal exposure to BPA has a significant impact on brain development, resulting in future behavioral problems. Beyond affecting the endocrine system, BPA can be linked to obesity, type II diabetes, high blood pressure, and autoimmune disorders. 
+
+##### **Approaches and Results** 
+
+International organizations are well aware of the health implications of BPA exposure and have established policies to limit BPA’s use since 2008. After completing a chemical risk assessment, Health Canada officials proposed banning BPA’s use in plastic baby bottles and infant formula cans. The EFSA and China’s Ministry of Health made similar proposals in 2011, and the FDA followed suit in 2012. 
+
+The FDA last updated its stance on BPA in June 2014, when the FDA’s BPA Joint Emerging Science Working Group reviewed a series of toxicological and scientific studies. In their assessment, the FDA declared that the no-observed-adverse-effect-level would remain at five milligrams per kilogram of body weight per day. Anything below the NOAEL is presumably a safe amount of exposure. The FDA derived the 5 mg limit from a 2008 review conducted by the National Toxicology Program’s Center for the Evaluation of Risks to Human Reproduction that analyzed multigenerational rodent studies. Key takeaways from the review included “minimal concern” for BPA’s effects on the mammary gland and “some concern” for the brain, behavior, and prostate gland development. 
+According to chemists from the Division of Food Contact Notifications, Division of Biotechnology, and Generally Recognized as Safe Notice Review, the average American child, age two or younger is exposed to 0.0002 mg/kg-bw of BPA per day. Meanwhile, the members of the U.S. population over the age of two are exposed to an average of 0.0005 mg/kg-bw/day. When compared to the NTP-CERHR research and the FDA’s NOAEL, Americans’ average BPA consumption appears healthy across age ranges. 
+
+In December 2021, the EFSA released a draft calling for the tolerable daily intake of BPA to be reduced from 4 micrograms to 0.04 nanograms. The EFSA’s proposed limit is 100,000 times less than its former standard. A nanogram is one-billionth of a gram. A grain of salt weighs about 58,500 nanograms. Therefore, setting the human BPA limit to 0.04 nanograms requires the complete removal of BPA from nearly every part of the food and beverage supply chain. 
+
+Historically, chemical assessments have been based on larger research projects and toxicology reviews that connect increased exposure to higher risks of disease. The EFSA reached the new safe exposure level by including smaller research studies that tracked how low levels of exposure may lead to small changes and eventually create larger health problems in their review. For example, a 2016 study conducted by China’s Anhui Medical University showed that mice developed more Th17 cells when exposed to 0.04 nanograms of BPA both before and after their birth. Excessive amounts of Th17 cells are known for causing inflammatory autoimmune systems like multiple sclerosis and rheumatoid arthritis. By considering more than just large toxicology studies, the EFSA has taken a more holistic approach to understanding the effects BPA has on human health. Consequently, the organization has also set a new approach for the reexamination of other chemical compounds. 
+
+##### **Conclusion** 
+
+While BPA has allowed for many advancements in consumer and industrial products, years of research show that overexposure leads to increased endocrine, cardiovascular, and autoimmune health risks. The most recent research highlights how even minimal exposure can result in lasting health issues. As more research is conducted on the relationship between BPA and human health, policies must adjust to minimize people’s exposure to the chemical.
+
+##### **Implications and Recommendations**
+
+With the emergence of the EFSA’s new data, grassroots organizations and doctors filed a petition with the FDA. On January 27, 2022, the Environmental Defense Fund, in partnership with Breast Cancer Prevention Partners, Clean Water Action, Consumer Reports, Endocrine Society, Environmental Working Group, Healthy Babies Bright Futures, Dr. Marciel Maffini, and Dr. Linda Birnbaum submitted a petition to the FDA, calling for the organization to remove and restrict BPA approvals. 
+
+Currently, the average American’s daily exposure to BPA is more than 5,000 times higher than the EFSA’s new proposed safety level. As put by petition signee and Consumer Reports’ Director of Food Policy, Brian Ronholm, “When you factor in the science, it’s pretty clear that we need to have a regulatory approach that significantly reduces consumer exposure.”
+
+Beyond reconsidering safe exposure levels of BPA, the FDA should implement a formal program to periodically review decisions about chemical exposures and food safety. According to Dr. Maricel Maffini, who co-authored the petition and has spent the last 20 years studying endocrine systems and chemical safety, “If we have a system, we shouldn’t have to look at regulations anti anything [...] after X number of years you just review them based on new hazard information.” 
+
+Lowering the BPA safe exposure level is just the beginning of minimizing human health risks that come from our food and drink supply. More research surrounding BPA and other chemical compounds must be conducted to understand the effects of toxicity. 
