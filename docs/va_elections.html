@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.189">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Kelli’s Data Journalism Website - Virginia Election</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="site_libs/datatables-binding-0.26/datatables.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="site_libs/dt-core-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="site_libs/dt-core-1.12.1/css/jquery.dataTables.extra.css" rel="stylesheet">
+<script src="site_libs/dt-core-1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="site_libs/jszip-1.12.1/jszip.min.js"></script>
+<link href="site_libs/dt-ext-buttons-1.12.1/css/buttons.dataTables.min.css" rel="stylesheet">
+<script src="site_libs/dt-ext-buttons-1.12.1/js/dataTables.buttons.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.12.1/js/buttons.html5.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.12.1/js/buttons.colVis.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.12.1/js/buttons.print.min.js"></script>
+<link href="site_libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet">
+<script src="site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet">
+<script src="site_libs/selectize-0.12.0/selectize.min.js"></script>
+<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Kelli’s Data Journalism Website</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://drive.google.com/file/d/14u28VhYGZ50hmFvCYQt7AN-kI1ybr1QO/view?usp=sharing">Resume</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html">About</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./portfolio.html">Portfolio</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./walkthrough.html">Walkthrough</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./paper.html">Policy Brief</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./academicpaper.html">Academic Paper</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./va_elections.html" aria-current="page">Virginia Election</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#creating-the-table" id="toc-creating-the-table" class="nav-link active" data-scroll-target="#creating-the-table">Creating the Table</a></li>
+  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
+  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
+  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
+  <li><a href="#exercise-4" id="toc-exercise-4" class="nav-link" data-scroll-target="#exercise-4">Exercise 4</a></li>
+  <li><a href="#exercise-5" id="toc-exercise-5" class="nav-link" data-scroll-target="#exercise-5">Exercise 5</a></li>
+  <li><a href="#exercise-6" id="toc-exercise-6" class="nav-link" data-scroll-target="#exercise-6">Exercise 6</a></li>
+  <li><a href="#extra-credit" id="toc-extra-credit" class="nav-link" data-scroll-target="#extra-credit">Extra Credit</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Virginia Election</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>The following analysis is based on a combined data frame showing presidential and gubernatorial 2020 election results of different Virginia counties. The columns show the number of votes for presidental canidates Joe Biden (D) and Donald Trump (R), and gubernatorial candidates Terry McAuliffe (D) and Glenn Youngkin (R). Additional columns highlights the percent of votes each candidate got in their respective elections. This analysis provides insight on how Virginians voted. It is interesting to see the differences in voters’ preferences across counties.</p>
+<p>The data used can be seen, downloaded, and filtered in the first table below. The original data used to create this dataframe was collected from <a href="https://www.virginia.gov/">virginia.gov</a>. The base dataset can be downloaded from the table.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#These are the R packages that need to be loaded to run the following exercises. </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+✔ tibble  3.1.8      ✔ dplyr   1.0.10
+✔ tidyr   1.2.1      ✔ stringr 1.4.1 
+✔ readr   2.1.3      ✔ forcats 0.5.2 
+✔ purrr   0.3.5      
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()</code></pre>
+</div>
+</div>
+<p>Open the data frame using read_excel and assign it to the variable va_df. Using the mutate() function and as.factor(), we can change the locality column’s data type from character to factor. This will allow us to create a drop down selection to filter the following table by county.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>va_df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"va_2022_election_results.xlsx"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>va_df <span class="ot">&lt;-</span>  va_df <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">locality =</span> <span class="fu">as.factor</span>(locality))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="creating-the-table" class="level3">
+<h3 class="anchored" data-anchor-id="creating-the-table">Creating the Table</h3>
+<p>The following code snippet will create an interactive, paginated data table of the data set saved under va_df. The code below uses datatable() from the package DT to build an interactive table of the va_df data. The buttons extensions allows viewers to copy and download the data as their preferred file format.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(va_df,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">filter =</span> <span class="st">"top"</span>, </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">extensions =</span> <span class="st">'Buttons'</span>, </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">options =</span> <span class="fu">list</span>(   </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">dom =</span> <span class="st">'Bfrtip'</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">buttons =</span> <span class="fu">c</span>(<span class="st">'copy'</span>, <span class="st">'csv'</span>, <span class="st">"excel"</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>              )) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div id="htmlwidget-aae9f00d5f902824442a" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-aae9f00d5f902824442a">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td><\/td>\n  <td data-type=\"factor\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"width: 100%; display: none;\">\n      <select multiple=\"multiple\" style=\"width: 100%;\" data-options=\"[&quot;ACCOMACK COUNTY&quot;,&quot;ALBEMARLE COUNTY&quot;,&quot;ALEXANDRIA CITY&quot;,&quot;ALLEGHANY COUNTY&quot;,&quot;AMELIA COUNTY&quot;,&quot;AMHERST COUNTY&quot;,&quot;APPOMATTOX COUNTY&quot;,&quot;ARLINGTON COUNTY&quot;,&quot;AUGUSTA COUNTY&quot;,&quot;BATH COUNTY&quot;,&quot;BEDFORD COUNTY&quot;,&quot;BLAND COUNTY&quot;,&quot;BOTETOURT COUNTY&quot;,&quot;BRISTOL CITY&quot;,&quot;BRUNSWICK COUNTY&quot;,&quot;BUCHANAN COUNTY&quot;,&quot;BUCKINGHAM COUNTY&quot;,&quot;BUENA VISTA CITY&quot;,&quot;CAMPBELL COUNTY&quot;,&quot;CAROLINE COUNTY&quot;,&quot;CARROLL COUNTY&quot;,&quot;CHARLES CITY COUNTY&quot;,&quot;CHARLOTTE COUNTY&quot;,&quot;CHARLOTTESVILLE CITY&quot;,&quot;CHESAPEAKE CITY&quot;,&quot;CHESTERFIELD COUNTY&quot;,&quot;CLARKE COUNTY&quot;,&quot;COLONIAL HEIGHTS CITY&quot;,&quot;COVINGTON CITY&quot;,&quot;CRAIG COUNTY&quot;,&quot;CULPEPER COUNTY&quot;,&quot;CUMBERLAND COUNTY&quot;,&quot;DANVILLE CITY&quot;,&quot;DICKENSON COUNTY&quot;,&quot;DINWIDDIE COUNTY&quot;,&quot;EMPORIA CITY&quot;,&quot;ESSEX COUNTY&quot;,&quot;FAIRFAX CITY&quot;,&quot;FAIRFAX COUNTY&quot;,&quot;FALLS CHURCH CITY&quot;,&quot;FAUQUIER COUNTY&quot;,&quot;FLOYD COUNTY&quot;,&quot;FLUVANNA COUNTY&quot;,&quot;FRANKLIN CITY&quot;,&quot;FRANKLIN COUNTY&quot;,&quot;FREDERICK COUNTY&quot;,&quot;FREDERICKSBURG CITY&quot;,&quot;GALAX CITY&quot;,&quot;GILES COUNTY&quot;,&quot;GLOUCESTER COUNTY&quot;,&quot;GOOCHLAND COUNTY&quot;,&quot;GRAYSON COUNTY&quot;,&quot;GREENE COUNTY&quot;,&quot;GREENSVILLE COUNTY&quot;,&quot;HALIFAX COUNTY&quot;,&quot;HAMPTON CITY&quot;,&quot;HANOVER COUNTY&quot;,&quot;HARRISONBURG CITY&quot;,&quot;HENRICO COUNTY&quot;,&quot;HENRY COUNTY&quot;,&quot;HIGHLAND COUNTY&quot;,&quot;HOPEWELL CITY&quot;,&quot;ISLE OF WIGHT COUNTY&quot;,&quot;JAMES CITY COUNTY&quot;,&quot;KING &amp; QUEEN COUNTY&quot;,&quot;KING GEORGE COUNTY&quot;,&quot;KING WILLIAM COUNTY&quot;,&quot;LANCASTER COUNTY&quot;,&quot;LEE COUNTY&quot;,&quot;LEXINGTON CITY&quot;,&quot;LOUDOUN COUNTY&quot;,&quot;LOUISA COUNTY&quot;,&quot;LUNENBURG COUNTY&quot;,&quot;LYNCHBURG CITY&quot;,&quot;MADISON COUNTY&quot;,&quot;MANASSAS CITY&quot;,&quot;MANASSAS PARK CITY&quot;,&quot;MARTINSVILLE CITY&quot;,&quot;MATHEWS COUNTY&quot;,&quot;MECKLENBURG COUNTY&quot;,&quot;MIDDLESEX COUNTY&quot;,&quot;MONTGOMERY COUNTY&quot;,&quot;NELSON COUNTY&quot;,&quot;NEW KENT COUNTY&quot;,&quot;NEWPORT NEWS CITY&quot;,&quot;NORFOLK CITY&quot;,&quot;NORTHAMPTON COUNTY&quot;,&quot;NORTHUMBERLAND COUNTY&quot;,&quot;NORTON CITY&quot;,&quot;NOTTOWAY COUNTY&quot;,&quot;ORANGE COUNTY&quot;,&quot;PAGE COUNTY&quot;,&quot;PATRICK COUNTY&quot;,&quot;PETERSBURG CITY&quot;,&quot;PITTSYLVANIA COUNTY&quot;,&quot;POQUOSON CITY&quot;,&quot;PORTSMOUTH CITY&quot;,&quot;POWHATAN COUNTY&quot;,&quot;PRINCE EDWARD COUNTY&quot;,&quot;PRINCE GEORGE COUNTY&quot;,&quot;PRINCE WILLIAM COUNTY&quot;,&quot;PULASKI COUNTY&quot;,&quot;RADFORD CITY&quot;,&quot;RAPPAHANNOCK COUNTY&quot;,&quot;RICHMOND CITY&quot;,&quot;RICHMOND COUNTY&quot;,&quot;ROANOKE CITY&quot;,&quot;ROANOKE COUNTY&quot;,&quot;ROCKBRIDGE COUNTY&quot;,&quot;ROCKINGHAM COUNTY&quot;,&quot;RUSSELL COUNTY&quot;,&quot;SALEM CITY&quot;,&quot;SCOTT COUNTY&quot;,&quot;SHENANDOAH COUNTY&quot;,&quot;SMYTH COUNTY&quot;,&quot;SOUTHAMPTON COUNTY&quot;,&quot;SPOTSYLVANIA COUNTY&quot;,&quot;STAFFORD COUNTY&quot;,&quot;STAUNTON CITY&quot;,&quot;SUFFOLK CITY&quot;,&quot;SURRY COUNTY&quot;,&quot;SUSSEX COUNTY&quot;,&quot;TAZEWELL COUNTY&quot;,&quot;VIRGINIA BEACH CITY&quot;,&quot;WARREN COUNTY&quot;,&quot;WASHINGTON COUNTY&quot;,&quot;WAYNESBORO CITY&quot;,&quot;WESTMORELAND COUNTY&quot;,&quot;WILLIAMSBURG CITY&quot;,&quot;WINCHESTER CITY&quot;,&quot;WISE COUNTY&quot;,&quot;WYTHE COUNTY&quot;,&quot;YORK COUNTY&quot;]\"><\/select>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"417\" data-max=\"419943\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"754\" data-max=\"168401\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"14.97\" data-max=\"87.75\" data-scale=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"11.22\" data-max=\"84.1\" data-scale=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"723\" data-max=\"152110\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"320\" data-max=\"286316\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"13.5\" data-max=\"87.6\" data-scale=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"12.13\" data-max=\"84.87\" data-scale=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","extensions":["Buttons"],"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100","101","102","103","104","105","106","107","108","109","110","111","112","113","114","115","116","117","118","119","120","121","122","123","124","125","126","127","128","129","130","131","132","133"],["ACCOMACK COUNTY","ALBEMARLE COUNTY","ALEXANDRIA CITY","ALLEGHANY COUNTY","AMELIA COUNTY","AMHERST COUNTY","APPOMATTOX COUNTY","ARLINGTON COUNTY","AUGUSTA COUNTY","BATH COUNTY","BEDFORD COUNTY","BLAND COUNTY","BOTETOURT COUNTY","BRISTOL CITY","BRUNSWICK COUNTY","BUCHANAN COUNTY","BUCKINGHAM COUNTY","BUENA VISTA CITY","CAMPBELL COUNTY","CAROLINE COUNTY","CARROLL COUNTY","CHARLES CITY COUNTY","CHARLOTTE COUNTY","CHARLOTTESVILLE CITY","CHESAPEAKE CITY","CHESTERFIELD COUNTY","CLARKE COUNTY","COLONIAL HEIGHTS CITY","COVINGTON CITY","CRAIG COUNTY","CULPEPER COUNTY","CUMBERLAND COUNTY","DANVILLE CITY","DICKENSON COUNTY","DINWIDDIE COUNTY","EMPORIA CITY","ESSEX COUNTY","FAIRFAX COUNTY","FAIRFAX CITY","FALLS CHURCH CITY","FAUQUIER COUNTY","FLOYD COUNTY","FLUVANNA COUNTY","FRANKLIN COUNTY","FRANKLIN CITY","FREDERICK COUNTY","FREDERICKSBURG CITY","GALAX CITY","GILES COUNTY","GLOUCESTER COUNTY","GOOCHLAND COUNTY","GRAYSON COUNTY","GREENE COUNTY","GREENSVILLE COUNTY","HALIFAX COUNTY","HAMPTON CITY","HANOVER COUNTY","HARRISONBURG CITY","HENRICO COUNTY","HENRY COUNTY","HIGHLAND COUNTY","HOPEWELL CITY","ISLE OF WIGHT COUNTY","JAMES CITY COUNTY","KING &amp; QUEEN COUNTY","KING GEORGE COUNTY","KING WILLIAM COUNTY","LANCASTER COUNTY","LEE COUNTY","LEXINGTON CITY","LOUDOUN COUNTY","LOUISA COUNTY","LUNENBURG COUNTY","LYNCHBURG CITY","MADISON COUNTY","MANASSAS CITY","MANASSAS PARK CITY","MARTINSVILLE CITY","MATHEWS COUNTY","MECKLENBURG COUNTY","MIDDLESEX COUNTY","MONTGOMERY COUNTY","NELSON COUNTY","NEW KENT COUNTY","NEWPORT NEWS CITY","NORFOLK CITY","NORTHAMPTON COUNTY","NORTHUMBERLAND COUNTY","NORTON CITY","NOTTOWAY COUNTY","ORANGE COUNTY","PAGE COUNTY","PATRICK COUNTY","PETERSBURG CITY","PITTSYLVANIA COUNTY","POQUOSON CITY","PORTSMOUTH CITY","POWHATAN COUNTY","PRINCE EDWARD COUNTY","PRINCE GEORGE COUNTY","PRINCE WILLIAM COUNTY","PULASKI COUNTY","RADFORD CITY","RAPPAHANNOCK COUNTY","RICHMOND COUNTY","RICHMOND CITY","ROANOKE COUNTY","ROANOKE CITY","ROCKBRIDGE COUNTY","ROCKINGHAM COUNTY","RUSSELL COUNTY","SALEM CITY","SCOTT COUNTY","SHENANDOAH COUNTY","SMYTH COUNTY","SOUTHAMPTON COUNTY","SPOTSYLVANIA COUNTY","STAFFORD COUNTY","STAUNTON CITY","SUFFOLK CITY","SURRY COUNTY","SUSSEX COUNTY","TAZEWELL COUNTY","VIRGINIA BEACH CITY","WARREN COUNTY","WASHINGTON COUNTY","WAYNESBORO CITY","WESTMORELAND COUNTY","WILLIAMSBURG CITY","WINCHESTER CITY","WISE COUNTY","WYTHE COUNTY","YORK COUNTY"],[7578,42466,66240,2243,2411,5672,2418,105344,10840,646,12176,532,5700,2313,4552,1587,3471,825,8070,7657,2842,2624,2317,20696,66377,106935,3920,2972,964,587,10617,2227,11710,1503,6224,1612,3038,419943,9174,7146,17565,3004,7414,8381,2525,17207,8517,777,2156,6964,6685,1535,4163,2627,7666,46220,25307,11022,116572,9127,417,5430,9399,25553,1590,5404,3260,3368,1489,1791,138372,8269,2418,18048,2698,10356,3992,3766,1825,6803,2491,23218,4327,4621,53099,64440,3667,3252,464,2971,7995,3007,1954,12389,10115,2054,30948,5320,4973,7103,142863,4925,3358,2096,1513,92175,21801,26773,4086,12644,2373,5148,1692,6836,3008,3969,34307,40245,6981,28676,2397,2827,3205,117393,6603,6617,4961,4501,4790,6610,3110,3143,17683],[9172,20804,14544,5859,5390,11041,6702,22318,30714,1834,35600,2903,15099,5347,3357,8311,4544,1863,21245,8336,12659,1761,3815,3094,58180,93326,5192,6007,1580,2536,16012,3019,7428,5748,8695,754,3075,168401,4007,1490,25106,6225,8155,20895,1487,30558,4037,1838,6876,14875,9966,6529,6866,1914,10418,18430,44318,5591,63440,16725,1092,4020,13707,23153,2450,8446,7320,3697,8365,906,82088,13294,3537,17097,5300,6256,1979,2165,3901,9266,4196,20629,4812,9631,26377,23443,2955,4485,1109,4027,12426,9345,7485,1584,23751,5605,12755,14055,4434,10103,81222,12127,2786,2812,2547,16603,34268,15607,8088,30349,10879,7683,9063,16463,10963,5730,39411,37636,5695,20082,2025,2219,16731,105087,14069,21679,5507,5318,1963,5221,13366,11733,20241],[44.68,65.68,80.28,27.34,30.55,33.35,26.09,80.6,25.64,25.83,25.02,15.29,26.99,29.63,57.27,15.94,42.71,29.72,27,47.01,18.16,59.09,37.43,85.5,52.22,52.45,41.98,32.5,37.03,18.52,39.15,41.94,60.4,20.58,41.24,67.7,49.17,69.89,68.04,81.03,40.23,31.93,46.81,28.22,62.22,35.33,66.22,29.45,23.5,31.25,39.44,18.88,36.8,57.43,42.01,70.14,35.66,64.51,63.65,34.96,27.2,56.52,40.07,51.5,38.64,37.99,30.37,47.09,14.97,64.84,61.54,37.73,40.3,49.63,33.19,61.03,65.58,62.63,31.33,41.98,36.71,51.55,46.45,31.95,65.39,71.69,54.47,41.61,28.98,41.98,38.54,24.03,20.5,87.75,29.55,26.14,69.42,26.96,51.94,40.75,62.64,28.34,53.13,42.11,36.88,82.92,38.12,61.8,33.02,28.86,17.73,39.45,15.57,28.86,21.28,40.56,45.55,50.54,53.74,57.77,53.61,55.56,15.92,51.59,31.22,23.07,46.29,45.31,69.59,54.6,18.72,20.85,45.59],[54.07,32.18,17.63,71.43,68.29,64.93,72.31,17.08,72.65,73.33,73.15,83.44,71.49,68.5,42.24,83.5,55.92,67.11,71.07,51.18,80.88,39.65,61.62,12.78,45.77,45.77,55.61,65.68,60.7,80.03,59.05,56.85,38.31,78.71,57.61,31.67,49.77,28.03,29.72,16.9,57.5,66.17,51.48,70.35,36.64,62.74,31.39,69.67,74.93,66.76,58.8,80.3,60.7,41.85,57.09,27.97,62.45,32.72,34.64,64.07,71.23,41.84,58.44,46.66,59.54,59.38,68.18,51.69,84.1,32.8,36.51,60.66,58.95,47.02,65.2,36.87,32.51,36.01,66.96,57.18,61.84,45.8,51.65,66.59,32.48,26.08,43.89,57.39,69.27,56.89,59.91,74.68,78.51,11.22,69.39,71.34,28.61,71.24,46.31,57.96,35.61,69.79,44.08,56.49,62.09,14.94,59.93,36.02,65.37,69.27,81.27,58.87,83.38,69.51,77.55,58.55,52.33,47.27,43.84,40.45,45.29,43.61,83.1,46.18,66.53,75.58,51.39,53.54,28.52,43.13,80.45,77.85,52.19],[7878,19141,14013,4530,4720,9731,5971,21548,26196,1539,30912,2274,13066,3773,2880,5083,3894,1459,18213,6917,9868,1550,3354,2774,48079,80889,4642,4913,1198,2079,13436,2678,5907,3867,7335,723,2684,152110,3606,1590,22252,5230,7068,17842,1270,25063,3503,1424,5788,12585,9585,5144,5961,1709,8641,14651,39515,4382,55796,12902,969,3095,12000,21048,2112,7286,6286,3448,6372,775,71467,11649,3019,13668,4721,5050,1379,1676,3493,7922,3703,17041,4259,8569,21241,18888,2650,4167,866,3497,10670,7594,5946,1207,19543,4897,9946,12582,3876,8548,64658,9631,2266,2507,2225,15713,28157,12024,6906,26765,8229,6144,7065,13693,8477,5084,32478,31680,4640,17351,1768,1973,12045,86973,11294,17395,4473,4614,1703,4137,9691,9458,17485],[4948,31919,43866,1518,1617,3897,1438,73013,7231,396,8001,364,3990,1342,3165,903,2222,481,4930,5045,1910,1822,1396,14378,42907,74085,2739,1729,579,400,6661,1515,6872,934,4181,1087,1980,286316,6465,5388,11570,2203,5312,5894,1680,11164,5402,492,1535,4712,4910,1062,2806,1915,4804,29971,18107,6812,81409,5547,325,3085,6565,18836,1130,3317,2247,2406,882,1289,89390,5896,1567,11000,1973,6155,2158,2224,1363,4075,1860,15355,3346,3439,32399,40324,2584,2312,320,1892,5351,1995,1255,7591,6319,1364,19513,3721,3210,4577,87352,3277,1879,1686,936,61929,14445,16817,3071,8569,1452,3344,1034,4535,1751,2717,21426,25463,5004,19079,1756,2028,1821,73965,4328,4505,3275,2971,3185,4294,1796,2043,12190],[61.08,37.21,24.02,74.52,74.19,71,80.26,22.63,77.93,79.04,79.1,85.78,76.3,73.3,47.34,84.72,63.29,74.33,78.39,57.35,83.45,45.76,70.26,15.99,52.43,51.76,62.54,73.27,66.82,83.16,66.47,63.38,45.92,80.31,63.33,39.47,57,34.47,35.56,22.63,65.46,69.75,56.75,74.82,42.83,68.9,38.77,73.94,78.33,72.37,65.87,82.48,67.42,46.98,63.9,32.48,68.18,38.65,40.24,69.61,74.37,49.31,64.26,52.5,64.77,68.09,73.33,58.71,87.6,37.3,44.17,66.04,65.67,54.89,70.17,44.67,38.34,42.48,71.56,65.81,65.97,51.96,55.46,71.02,39.14,31.45,50.34,63.95,71.99,64.57,66.23,78.92,82.14,13.5,75.31,77.75,33.34,76.86,54.4,64.65,42.2,74.06,54.03,59.45,69.9,19.61,65.7,41.25,68.89,75.31,84.83,64.29,86.89,74.64,82.55,64.9,59.84,55,47.49,47.26,50,49.02,86.59,53.62,71.85,79.08,56.94,60.55,34.54,48.69,83.9,81.78,58.59],[38.37,62.05,75.2,24.97,25.42,28.43,19.33,76.67,21.51,20.34,20.47,13.73,23.3,26.07,52.02,15.05,36.11,24.5,21.22,41.83,16.15,53.79,29.24,82.88,46.79,47.41,36.9,25.79,32.29,16,32.95,35.86,53.42,19.4,36.1,59.33,42.05,64.89,63.74,76.69,34.04,29.38,42.65,24.71,56.66,30.69,59.79,25.55,20.77,27.09,33.74,17.03,31.73,52.64,35.53,66.45,31.24,60.09,58.71,29.93,24.94,49.16,35.16,46.98,34.65,31,26.21,40.97,12.13,62.03,55.25,33.43,34.09,44.17,29.33,54.44,59.99,56.38,27.92,33.85,33.14,46.82,43.57,28.5,59.69,67.14,49.09,35.48,26.6,34.93,33.22,20.73,17.34,84.87,24.35,21.66,65.41,22.73,45.05,34.62,57.01,25.2,44.8,39.98,29.41,77.27,33.7,57.7,30.64,24.11,14.97,34.99,12.72,24.72,17.05,34.68,39.47,44.2,51.21,51.96,49.66,50.39,13.09,45.6,27.53,20.48,41.69,38.99,64.59,50.54,15.55,17.67,40.85]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>locality<\/th>\n      <th>biden<\/th>\n      <th>trump<\/th>\n      <th>biden_pct<\/th>\n      <th>trump_pct<\/th>\n      <th>youngkin<\/th>\n      <th>mcauliffe<\/th>\n      <th>pct_youngkin<\/th>\n      <th>pct_mcauliffe<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Bfrtip","buttons":["copy","csv","excel"],"columnDefs":[{"className":"dt-right","targets":[2,3,4,5,6,7,8,9]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="exercise-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-1">Exercise 1</h3>
+<p>In the next chunk of code, we will look at the counties with the greatest difference between the percent of voters for Youngkin and the percent of voters for Trump. First we have to add a new column to the va_Df data frame using the function mutate(). For each county/row, we will subtract the percent of Trump voters from the percent of Youngkin voters and save the value to a new column called diff_pct_vote_r. Next, we create a subset of va_df and save it under top5_diff_r. The subset is created by arranging the percent difference between Youngkin and Trump voters from highest to lowest and taking the top 5 values. Using the new dataframe, top5_diff_r, we will make a barchart with the ggplot package. ggtitle(), xlab(), and ylab() label different parts of the final graph.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>va_df <span class="ot">&lt;-</span> va_df <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">diff_pct_vote_r =</span> pct_youngkin <span class="sc">-</span> trump_pct</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>top5_diff_r <span class="ot">&lt;-</span> va_df <span class="sc">%&gt;%</span> </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>               <span class="fu">arrange</span>(<span class="fu">desc</span>(diff_pct_vote_r)) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>               <span class="fu">head</span>(<span class="dv">5</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(top5_diff_r, <span class="fu">aes</span>(<span class="at">y=</span>locality, <span class="at">x=</span>diff_pct_vote_r))<span class="sc">+</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()<span class="sc">+</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Top 5 Counties with the Largest Difference Between the % </span><span class="sc">\n</span><span class="st">of Votes Received by Youngkin and Trump"</span>)<span class="sc">+</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"% Difference between Votes for Youngkin and Trump"</span>)<span class="sc">+</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"County"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="va_elections_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="exercise-2" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-2">Exercise 2</h3>
+<p>In the next chunk of code, we will create a chart that shows the 5 counties where Youngkin got the highest percent of votes. The first step is to create a subset of va_df that only shows the 5 counties where Youngkin got the highest percent of votes. We will nest desc() in arrange() to sort the data, and then take the first five counties with head(), and save the results to top5_youngkin. We can now graph top5_youngkin using the ggplot package. ggtitle(), xlab(), and ylab() label different parts of the final graph.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>top5_youngkin <span class="ot">&lt;-</span> va_df <span class="sc">%&gt;%</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">arrange</span>(<span class="fu">desc</span>(pct_youngkin)) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">head</span>(<span class="dv">5</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(top5_youngkin, <span class="fu">aes</span>(<span class="at">x=</span>locality, <span class="at">y=</span>pct_youngkin))<span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()<span class="sc">+</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Five Counties with the Highest % of Voters for Youngkin for VA Governor"</span>)<span class="sc">+</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"County"</span>)<span class="sc">+</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"% of Voters"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="va_elections_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="exercise-3" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-3">Exercise 3</h3>
+<p>The following code walks through how to create a table that shows the five counties where McAuliffe got the highest percent of votes for governor. The first step is to create a subset of va_df that only shows the 5 counties where McAuliffe got the highest percent of votes. We will select the locality and pct_mcauliffe columns, then nest desc() in arrange() to sort the data from highest to lowest, and then take the first five counties with head(), and save the results to top5_mcauliffe. We then create a table from the subset of data using the datatable function from the DT package. To make the table simple, we remove row names, searching, and paging by setting the arguements to FALSE.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>top5_mcauliffe <span class="ot">&lt;-</span> va_df <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">select</span>(locality, pct_mcauliffe) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">arrange</span>(<span class="fu">desc</span>(pct_mcauliffe)) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">head</span>(<span class="dv">5</span>) </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>top5_mcauliffe_table <span class="ot">&lt;-</span> DT<span class="sc">::</span><span class="fu">datatable</span>(top5_mcauliffe, </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>                        <span class="at">rownames =</span> <span class="cn">FALSE</span>, </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>                        <span class="at">options =</span> <span class="fu">list</span>(<span class="at">searching =</span> <span class="cn">FALSE</span>, <span class="at">paging =</span> <span class="cn">FALSE</span>, <span class="at">dom =</span> <span class="st">"tip"</span>)) </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>top5_mcauliffe_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div id="htmlwidget-6b7e30ebab2db29db1bf" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6b7e30ebab2db29db1bf">{"x":{"filter":"none","vertical":false,"data":[["PETERSBURG CITY","CHARLOTTESVILLE CITY","RICHMOND CITY","FALLS CHURCH CITY","ARLINGTON COUNTY"],[84.87,82.88,77.27,76.69,76.67]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>locality<\/th>\n      <th>pct_mcauliffe<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searching":false,"paging":false,"dom":"tip","columnDefs":[{"className":"dt-right","targets":1}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="exercise-4" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-4">Exercise 4</h3>
+<p>The five localities with the largest percent difference between votes for Biden and votes for McAuliffe are Charlotte, Emporia, Mecklenburg, Radford, and Richmond.We can reach this insight and the following graph by first adding another column to the original dataset. the diff_pct_vote_d column is calculated by subtracting pct_mcauliffe from biden_pct. We add the column to the data frame by using the mutate() function. The following code takes only the locality, biden_pct, pct_mcauliffe, and new diff_pct_vote_d column from the va_df data, and sorts the rows by diff_pct_vote_d from highest to lowest. head(5) means only the top 5 rows are saved to the data subset top5_diff_d.&nbsp;We can now make a graph of the five localities with the biggest percent difference between Biden and McAuliffe voters using ggplot(). ggtitle(), xlab(), and ylab() label different parts of the final graph.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>va_df <span class="ot">&lt;-</span> va_df <span class="sc">%&gt;%</span> </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">diff_pct_vote_d =</span> biden_pct <span class="sc">-</span> pct_mcauliffe</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>top5_diff_d <span class="ot">&lt;-</span> va_df <span class="sc">%&gt;%</span> </span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>               <span class="fu">select</span>(locality, biden_pct, pct_mcauliffe, diff_pct_vote_d) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>               <span class="fu">arrange</span>(<span class="fu">desc</span>(diff_pct_vote_d)) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>               <span class="fu">head</span>(<span class="dv">5</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(top5_diff_d, <span class="fu">aes</span>(<span class="at">x=</span>locality, <span class="at">y=</span>diff_pct_vote_d))<span class="sc">+</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()<span class="sc">+</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Top 5 Counties with the Largest Difference Between the % </span><span class="sc">\n</span><span class="st">of Votes Received by Biden and McAuliffe"</span>)<span class="sc">+</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"County"</span>)<span class="sc">+</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"% Difference Between Votes for Biden and McAuliffe"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="va_elections_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="exercise-5" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-5">Exercise 5</h3>
+<p>The five localities with the lowest percent of Trump voters are Petersburg, Charlottesville, Richmond, Falls Church, and Arlington. We can find this quickly using pipe operators. We assign low5_trump to select the columns locality, trump, and trump_pct. We then arrange the data from lowest to smallest value of percent of trump voters with the arrange function. Then we take the top 5 with head() and put it into an interactive table using the DT package. The resulting table is simple because we set the arguements for rownames, searching, and paging as FALSE.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>low5_trump <span class="ot">&lt;-</span> va_df <span class="sc">%&gt;%</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>              <span class="fu">select</span>(locality, trump, trump_pct) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>              <span class="fu">arrange</span>(trump_pct) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>              <span class="fu">head</span>(<span class="dv">5</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>              DT<span class="sc">::</span><span class="fu">datatable</span>(<span class="at">rownames =</span> <span class="cn">FALSE</span>, </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">options =</span> <span class="fu">list</span>(<span class="at">searching =</span> <span class="cn">FALSE</span>, <span class="at">paging =</span> <span class="cn">FALSE</span>, <span class="at">dom =</span> <span class="st">"tip"</span>)) </span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>low5_trump</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div id="htmlwidget-b0a206daabb58ee3a82a" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b0a206daabb58ee3a82a">{"x":{"filter":"none","vertical":false,"data":[["PETERSBURG CITY","CHARLOTTESVILLE CITY","RICHMOND CITY","FALLS CHURCH CITY","ARLINGTON COUNTY"],[1584,3094,16603,1490,22318],[11.22,12.78,14.94,16.9,17.08]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>locality<\/th>\n      <th>trump<\/th>\n      <th>trump_pct<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searching":false,"paging":false,"dom":"tip","columnDefs":[{"className":"dt-right","targets":[1,2]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="exercise-6" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-6">Exercise 6</h3>
+<p>The five counties with the lowest percent of Biden voters are Tazewell, Scott, Lee, Buchanan, and Bland. We can find this by first making a subset of va_df. First, we select only the locality and biden_pct columns. Then we arrange biden_pct from lowest to highest value. Then we take the first five rows using the head() function. We save this subset to low5_biden. The following code creates a visualization of low5_biden using ggplot notation. ggplot(). ggtitle(), xlab(), and ylab() label different parts of the final graph.geom_text() labels each bar with the corresponding percent of Biden voters.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>low5_biden<span class="ot">&lt;-</span> va_df <span class="sc">%&gt;%</span> </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>             <span class="fu">select</span>(locality, biden_pct) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>             <span class="fu">arrange</span>(biden_pct) <span class="sc">%&gt;%</span>  </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>             <span class="fu">head</span>(<span class="dv">5</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(low5_biden, <span class="fu">aes</span>(<span class="at">x=</span>biden_pct, <span class="at">y=</span>locality))<span class="sc">+</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()<span class="sc">+</span> </span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"The Five Virginia Counties with the Lowest % of Voters for Biden"</span>)<span class="sc">+</span> </span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"% of voters for Biden"</span>) <span class="sc">+</span> </span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"County"</span>) <span class="sc">+</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> biden_pct))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="va_elections_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="extra-credit" class="level3">
+<h3 class="anchored" data-anchor-id="extra-credit">Extra Credit</h3>
+<p>The following code creates a function called sort_biden_vote. To use the function you insert a number and it will return the number of counties with the lowest percent of Biden voters. For example, if you typed sort_biden_vote(15), it would return the 15 Virginia counties with the lowest percent of voters for Biden. First, we assign sort_biden_vote to a function that takes one input arguement The function takes the locality, biden, and biden_pct columns from the va_df dataset and orders it by biden_pct from lowest to highest. It then uses head() with the user input and the DT package to return an interactive table that shows the corresponding number of counties with the lowest percent of voters for Biden.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>sort_biden_vote <span class="ot">&lt;-</span> <span class="cf">function</span>(number){</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  biden <span class="ot">&lt;-</span>  va_df <span class="sc">%&gt;%</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>              <span class="fu">select</span>(locality, biden, biden_pct) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>              <span class="fu">arrange</span>(biden_pct) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>              <span class="fu">head</span>(number) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>              DT<span class="sc">::</span><span class="fu">datatable</span>(<span class="at">options =</span> <span class="fu">list</span>(<span class="at">searching =</span> <span class="cn">FALSE</span>, <span class="at">paging =</span> <span class="cn">FALSE</span>, <span class="at">dom =</span> <span class="st">"tip"</span>)) </span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(biden)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sort_biden_vote</span>(<span class="dv">12</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div id="htmlwidget-b513eaa6e4bf01edafd5" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b513eaa6e4bf01edafd5">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12"],["LEE COUNTY","BLAND COUNTY","SCOTT COUNTY","TAZEWELL COUNTY","BUCHANAN COUNTY","RUSSELL COUNTY","CARROLL COUNTY","CRAIG COUNTY","WISE COUNTY","GRAYSON COUNTY","PATRICK COUNTY","DICKENSON COUNTY"],[1489,532,1692,3205,1587,2373,2842,587,3110,1535,1954,1503],[14.97,15.29,15.57,15.92,15.94,17.73,18.16,18.52,18.72,18.88,20.5,20.58]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>locality<\/th>\n      <th>biden<\/th>\n      <th>biden_pct<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searching":false,"paging":false,"dom":"tip","columnDefs":[{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Copyright 2022, Kelli Pang</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/kellipang">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

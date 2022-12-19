@@ -8,13 +8,14 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: https://docs.google.com/document/d/1dC94o7Tt_9sP-zoqCXTh0F4mpJBis5ZP/edit?usp=sharing&ouid=102064502494717724204&rtpof=true&sd=true
+      - href: https://drive.google.com/file/d/14u28VhYGZ50hmFvCYQt7AN-kI1ybr1QO/view?usp=sharing
         text: Resume
       - about.qmd
       - portfolio.qmd
       - walkthrough.qmd
       - paper.qmd
       - academicpaper.qmd
+      - va_elections.qmd
   page-footer: 
     left: "Copyright 2022, Kelli Pang" 
     right: 

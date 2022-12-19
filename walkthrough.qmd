@@ -1,5 +1,5 @@
 ---
-title: "Analysis Walkthrough"
+title: "Walkthrough"
 format:
   html:
     self-contained: true
@@ -345,34 +345,54 @@ Here are some of the key takeaways from this analysis and comparison of the dolp
 It would be interesting to take a closer look at the networks individually through metrics like, cluster coefficient and density.
 
 ### Analysis Code
-Here is the code used to create this analysis. For viewing ease, lines of code that plot graphs have been included as comments (i.e. #plot(dolphin_network, main="Dolphin Network")). To reciprocate analysis, remove the #s and run the code. 
+Here is the code used to create this analysis. For viewing ease, lines of code that plot graphs have been included as comments (i.e. #plot(dolphin_network, main="Dolphin Network")). To reciprocate analysis, remove the #s and run the code for plot(), hist(), and ggplot().
+
+Note that normalizing a measurement refers to the process of setting it to a scale to make the numbers comparable to one another. 
 ```{r results=FALSE, warning=FALSE, message=FALSE}
+#The following three lines of code install the necessary library packages for social network analysis. 
 library(igraph)
 library(igraphdata)
 library(ggplot2)
+
+#The next two lines of code load the datasets and assign them to the variables, dolphin_df and karate_df.
 dolphin_df <- "https://raw.githubusercontent.com/graphstream/gs-gephi/master/data/dolphins.gml"
 karate_df <- data("karate")
+#This reads the data set to create a graph object of the dolphin network. 
 dolphin_network <- read_graph(dolphin_df, format="gml")
+#This prints all of the attribute data for the dolphin network, including dolphin name and ID number, using get.vertex.attribute().
 get.vertex.attribute(dolphin_network)
+#This pulls a list of all of the connections in the dolphin network, using E(). 
 E(dolphin_network)
+#This reads the data set to create a graph object of the karate network. 
 karate_network <- karate
+#This prints all of the attribute data for the karate network, including node name, label number, faction, and corresponding color, , using get.vertex.attribute(). 
 get.vertex.attribute(karate_network)
+#This pulls a list of all of the connections in the karate network, using E(). 
 E(karate_network)
+
+#The following three lines graph the networks next to each other. par(mfrow=c(1,2)) creates a matrix for the plots to be printed in. main="" sets the graph's title.
 #par(mfrow=c(1,2))
 #plot(dolphin_network, main="Dolphin Network")
 #plot(karate_network, main="Karate Network")
+
+#The following three lines graph the histograms of the networks' degree distributions next to each other. par(mfrow=c(1,2)) creates a matrix for the plots to be printed in. main="" sets the graph's title.
 #par(mfrow=c(1,2))
 #hist(degree(dolphin_network), main="Dolphin Network \nDegree Distribution")
 #hist(degree(karate_network), main="Karate Network \nDegree Distribution")
+
+#This creates a new data frame that includes triad information about the dolphin network. triad.census() analyzes a network's triad structure. colnames() sets the column names in the new data frame created with as.data.frame. 
 dolphin_triad <- as.data.frame(triad.census(dolphin_network))
 dolphin_triad$code <- c("003", "012", "102", "021D", "021U", "021C", "111D", "111U",
              "030T", "030C", "201", "120D", "120U", "120C", "210", "300")
 colnames(dolphin_triad) <- c("freq", "code")
 
+#This creates a new data frame that includes triad information about the karate network. triad.census() analyzes a network's triad structure.colnames() sets the column names in the new data frame created with as.data.frame.
 karate_triad <- as.data.frame(triad.census(karate_network))
 karate_triad$code <- c("003", "012", "102", "021D", "021U", "021C", "111D", "111U",
              "030T", "030C", "201", "120D", "120U", "120C", "210", "300")
 colnames(karate_triad) <- c("freq", "code")
+
+#This graphs the distribution of triad structures in the dolphin network with ggplot() notation. It is a bar graph, filled with blue columns, with the x-axis label "Triad type based on MAN notation" and the y-axis label "Count" The graph is titled "Dolphin Network Triad Census". 
 #ggplot(dolphin_triad, aes(x = code, y = freq)) +
   #geom_bar(fill = "#0073C2FF", stat = "identity") +
   #geom_text(aes(label = freq), vjust = -0.3) +
@@ -380,6 +400,8 @@ colnames(karate_triad) <- c("freq", "code")
   #xlab("Triad type based on MAN notation") +
   #ylab("Count") +
   #ggtitle("Dolphin Network Triad Census")
+
+#This graphs the distribution of triad structures in the karate network  with ggplot() notation. It is a bar graph, filled with blue columns, with the x-axis label "Triad type based on MAN notation" and the y-axis label "Count" The graph is titled "Karate Network Triad Census". 
 #ggplot(karate_triad, aes(x = code, y = freq)) +
   #geom_bar(fill = "#0073C2FF", stat = "identity") +
   #geom_text(aes(label = freq), vjust = -0.3) +
@@ -387,46 +409,94 @@ colnames(karate_triad) <- c("freq", "code")
   #xlab("Triad type based on MAN notation") +
   #ylab("Count") +
   #ggtitle("Karate Network Triad Census")
+
+#The next chunk of code focuses on pulling information about nodes' degree centrality using the function degree(). Variations of the basic function are made by adding the argument normalized=TRUE. mean() calculates the average.  
+#This is the average degree of nodes in the dolphin network. 
 mean(degree(dolphin_network))
+#This pulls the degree of every node in the dolphin network, sorting in order from lowest to highest, and assigning their names. 
 sort(setNames( degree(dolphin_network),V(dolphin_network)$label))
+#This pulls the normalized degree of every node in the dolphin network, sorting in order from lowest to highest, and assigning their names. 
 sort(setNames( degree(dolphin_network, normalized = TRUE),V(dolphin_network)$label))
+#This is the normalized average degree of nodes in the dolphin network. 
 mean(degree(dolphin_network, normalized=TRUE))
+#This is the average degree of nodes in the karate network. 
 mean(degree(karate_network))
+#This pulls the degree of every node in the karate network, sorting in order from lowest to highest.
 sort(degree(karate_network))
+#This pulls the normalized degree of every node in the karate network, sorting in order from lowest to highest.
 sort(degree(karate_network, normalized = TRUE))
+#This is the normalized average degree of nodes in the karate network.
 mean(degree(karate_network, normalized=TRUE))
+
+
+#The next chunk of code focuses on pulling information about nodes' betweenness centrality using the function betweenness(). Variations of the basic function are made by adding the argument normalized=TRUE. mean() calculates the average.  
+#This is the average betweenness of a node in the dolphin network. 
 mean(betweenness(dolphin_network))
+#This calculates the betweenness of every node in the dolphin network, sorting in order from lowest to highest, and assigning their names. 
 sort(setNames( betweenness(dolphin_network),V(dolphin_network)$label))
+#This calculates the normalized betweenness of every node in the dolphin network, sorting in order from lowest to highest, and assigning their names. 
 sort(setNames( betweenness(dolphin_network, normalized=TRUE),V(dolphin_network)$label))
+#This is the normalized average betweeenness of a node in the dolphin network. 
 mean(betweenness(dolphin_network, normalized = TRUE))
+#This is the average betweenness of a node in the karate network. 
 mean(betweenness(karate_network))
+#This calculates the betweenness of every node in the karate network, sorting in order from lowest to highest.
 sort(betweenness(karate_network))
+#This calculates the normalized betweenness of every node in the karate network, sorting in order from lowest to highest.
 sort(betweenness(karate_network, normalized=TRUE))
+#This is the normalized average betweenness of a node in the karate network. 
 mean(betweenness(karate_network, normalized = TRUE))
+
+#The next chunk of code focuses on pulling information about nodes' closeness centrality using the function closeness(). Variations of the basic function are made by adding the arguement normalized=TRUE. mean() calculates the average.  
+#This is the average closeness of a node in the dolphin network. 
 mean(closeness(dolphin_network))
-dolphinclose <-  sort(setNames( closeness(dolphin_network),V(dolphin_network)$label))
+#This sorts the closeness centralities of each node in the dolphin network from lowest to highest with their names. 
+sort(setNames( closeness(dolphin_network),V(dolphin_network)$label))
+#This sorts the normalized closeness centralities of each node in the dolphin network from lowest to highest with their names. 
 sort(setNames( closeness(dolphin_network, normalized=TRUE),V(dolphin_network)$label))
+#This is the normalized average closeness of a node in the dolphin network.
 mean(closeness(dolphin_network, normalized = TRUE))
+#This is the average closeness of a node in the karate network. 
 mean(closeness(karate_network))
+#This sorts the closeness centralities of each node in the karate network from lowest to highest.
 sort(closeness(karate_network))
+#This sorts the normalized closeness centralities of each node in the karate network from lowest to highest.
 sort(closeness(karate_network, normalized=TRUE))
+#This is the normalized average closeness of a node in the karate network. 
 mean(closeness(karate_network, normalized = TRUE))
+
+#The next chunk of code focuses on pulling information about nodes' eigenvector centrality using the function eigen_centrality(). Variations of the basic function are made by adding the arguement normalized=TRUE. mean() calculates the average.  
+#This pulls the eigenvector centrality for each node in the dolphin network.
 dolphin_eigen <- eigen_centrality(dolphin_network)$vector
+#This sorts the dolphin network eigenvector centralities from lowest to highest with their names. 
 sort(setNames(dolphin_eigen, V(dolphin_network)$label))
+#This is the average eigenvector centrality for nodes in the dolphin network. 
 mean(eigen_centrality(dolphin_network)$vector)
+#This sorts and calculates the karate network eigenvector centralities from lowest to highest. 
 sort(eigen_centrality(karate_network)$vector)
+#This is the average eigenvector centrality for nodes in the karate network. 
 mean(eigen_centrality(karate_network)$vector)
+
+#This saves the dolphin network degree centralities to d_degree.
 d_degree <-  degree(dolphin_network)
+#This saves the dolphin network betweenness centralities to d_between.
 d_between <- betweenness(dolphin_network)
+#This saves the dolphin network closeness centralities to d_close.  
 d_close <- closeness(dolphin_network)
-d_eigen <- eigen_centrality(dolphin_network)
+#This creates a data frame of the dolphin network's nodes' centrality measurements by using data.frame() and inserting the saved centralities. 
 d_df <- data.frame(d_degree, d_between, d_close)
+#This creates a correlation matrix for the different centralities of the dolphin network using cor(). 
 cor(d_df)
+
+#This saves the karate network degree centralities to k_degree.
 k_degree <-  degree(karate_network)
+#This saves the karate network betweenness centralities to k_between.
 k_between <- betweenness(karate_network)
+#This saves the karate network closeness centralities to k_close. 
 k_close <- closeness(karate_network)
-k_eigen <- eigen_centrality(karate_network)
+#This creates a data frame of the karate network's nodes' centrality measurements by using data.frame() and inserting the saved centralities.
 k_df <- data.frame(k_degree, k_between, k_close)
+#This creates a correlation martrix for the different centralities of the karate network using cor(). 
 cor(k_df)
 ```
 
